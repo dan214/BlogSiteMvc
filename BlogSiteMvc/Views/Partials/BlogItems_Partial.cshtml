@@ -1,0 +1,16 @@
+﻿
+@foreach (var blog in Model.Content.Children)
+{
+
+<li>
+    <div class="banner-bottom-grid">
+        <img src="@blog.Image" alt=" " class="img-responsive" />
+        <p>
+            @blog.Intro
+        </p>
+        <div class="more">
+            <a href="single.html" class="hvr-bounce-to-bottom sint">Read More</a>
+        </div>
+    </div>
+</li>
+}
