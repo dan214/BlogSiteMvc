@@ -497,6 +497,7 @@
     <Content Include="fonts\Montserrat-Bold.ttf" />
     <Content Include="fonts\Montserrat-Regular.ttf" />
     <Content Include="Views\Partials\BlogItems_Partial.cshtml" />
+    <Content Include="Views\NewMaster.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
