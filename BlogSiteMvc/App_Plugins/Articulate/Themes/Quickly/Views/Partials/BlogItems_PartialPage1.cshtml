@@ -1,0 +1,26 @@
+﻿@using Articulate
+@using Articulate.Models
+@inherits UmbracoViewPage<Articulate.Models.IMasterModel>
+
+@{
+    var newsItems = Umbraco.GetRecentPosts(Model, 3);
+}
+
+<li>
+@foreach (var blog in newsItems)
+{
+
+    <li>
+        <div class="banner-bottom-grid">
+            <img src="@blog.BlogBanner" alt=" " class="img-responsive" />
+            <p>
+                @blog.Excerpt
+            </p>
+            <div class="more">
+                <a href="@blog.Url" class="hvr-bounce-to-bottom sint">Read More</a>
+            </div>
+        </div>
+    </li>
+}
+</li>
+

@@ -1,5 +1,12 @@
-﻿
-@foreach (var blog in Model.Content.Children)
+﻿@inherits Umbraco.Web.Mvc.UmbracoTemplatePage
+
+@{ 
+    var homePage = CurrentPage.AncestorsOrSelf(1).First();
+    var newsItems = CurrentPage.Children.Where("Name = @0", "blogItem"); ;
+}
+
+
+@foreach (var blog in newsItems)
 {
 
 <li>

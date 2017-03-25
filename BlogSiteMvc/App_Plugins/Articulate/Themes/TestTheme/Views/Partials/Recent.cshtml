@@ -1,0 +1,28 @@
+@using Articulate
+@using Articulate.Models
+@inherits UmbracoViewPage<Articulate.Models.IMasterModel>
+
+@{
+    var recent = Umbraco.GetRecentPosts(Model, 3);
+}
+
+<div class="recentposts">
+    <div class="content">
+            @foreach (var post in recent)
+            {
+                            <li>
+                                <div class="banner-inf">
+                                    <h3><a href="@post.Url">@post.Name</a></h3>
+                                    <p>
+                                        @post.Excerpt
+                                    </p>
+                                    <div>
+                                        <a data-disqus-identifier="@post.GetContentKey()" class="comment-count" href="@post.Url#disqus_thread"></a>
+                                    </div>
+                                    <a href="@post.Url">See More</a>
+                                </div>
+                            </li>          
+
+            }
+    </div>
+</div>

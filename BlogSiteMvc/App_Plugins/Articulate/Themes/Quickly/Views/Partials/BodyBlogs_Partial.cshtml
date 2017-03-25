@@ -1,0 +1,35 @@
+﻿@using Articulate
+@using Articulate.Models
+@inherits UmbracoViewPage<Articulate.Models.IMasterModel>
+
+@{
+    var newsItems = Umbraco.GetRecentPosts(Model, 2);
+}
+
+
+@foreach (var blog in newsItems)
+{
+<div class="blog-left-grid">
+    <div class="blog-left-grid-left">
+        <h3><a href="@blog.Url">@blog.Name</a></h3>
+        <p>by <span>@blog.Author</span> | @blog.PublishedDate.ToString("MMMM d, yyyy HH:mm")  | </p>
+    </div>
+    <div class="blog-left-grid-right">
+        <a data-disqus-identifier="@blog.GetContentKey()" href="@blog.Url#disqus_thread" class="hvr-bounce-to-bottom non"></a>
+    </div>
+    <div class="clearfix"> </div>
+
+ 
+     <a href="@blog.Url"><img src="@blog.BlogBanner" alt="@blog.Name" class="img-responsive" /></a>
+   
+
+
+    
+    <p class="para">
+        @blog.Excerpt
+    </p>
+    <div class="rd-mre">
+        <a href="@blog.Url" class="hvr-bounce-to-bottom quod">Read More</a>
+    </div>
+</div>
+}
