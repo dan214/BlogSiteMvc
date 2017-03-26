@@ -88,18 +88,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                 <div class="container">
                     <div class="footer-grids">
                         <div class="col-md-3 footer-grid">
-                            <h3>cumque nihil impedit</h3>
-                            <div class="footer-grd-left">
-                                <img src="~/images/11.jpg" class="img-responsive" alt=" " />
-                            </div>
-                            <div class="footer-grd-left">
-                                <p>
-                                    Nam libero tempore, cum
-                                    soluta nobis est eligendi optio cumque nihil impedit quo minus
-                                    id quod maxime placeat facere possimus, omnis voluptas assumenda
-                                    est, omnis dolor repellendus
-                                </p>
-                            </div>
+                            @Html.ThemedPartial(Model,"AboutMe_Partial")
                             <div class="clearfix"> </div>
                         </div>
                         <div class="col-md-3 footer-grid">
@@ -185,6 +174,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
             </script>
 
             @Html.GoogleAnalyticsTracking(Model)
+            </div>
+        </div>
 
 </body>
 </html>

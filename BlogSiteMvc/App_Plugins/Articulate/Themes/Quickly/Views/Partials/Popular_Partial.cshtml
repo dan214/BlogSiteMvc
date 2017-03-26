@@ -12,11 +12,11 @@
     <div class="tab_list">
     @if (!post.PostImageUrl.IsNullOrWhiteSpace())
     {
-        var thumbnail = post.GetCropUrl("postImage", "thumbnail");
-        if (!thumbnail.IsNullOrWhiteSpace())
+        var thumbnail2 = post.GetCropUrl("postImage", "thumbnail");
+        if (!thumbnail2.IsNullOrWhiteSpace())
         {
         <a href="@post.Url" class="b-link-stripe b-animate-go   swipebox" title="">
-            <img src="@thumbnail" alt="@post.Name" class="img-responsive" />
+            <img src="@thumbnail2" alt="@post.Name" class="img-responsive" />
         </a>
         }
     }

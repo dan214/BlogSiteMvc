@@ -143,7 +143,7 @@ a.navbar-brand:hover {
 /*-- //header --*/
 /*-- header-bottom --*/
 .header-bottom,.pages,.login,.sign-up-form,.about,.portfolio,.single-page-artical{
-	padding:0 3.5em 3.5em 3.5em;
+	padding:10px 23px;
 	background:#fff;
 }
 .header-bottom-top{
@@ -1561,13 +1561,13 @@ p.lom{
 	color: #C34C21;
 	text-align: left;
 	text-transform: capitalize;
-	padding: 3em 0 1.5em;
+	padding: 1em 0 1em;
 	font-size:2em;
 	margin: 0;
 	font-family: LobsterTwo-Regular;
 }
 .artical-content p {
-	color: #999;
+	color: #000;
 	font-size: 14px;
 	line-height: 1.8em;
 	margin: 1em 0;
@@ -1692,9 +1692,9 @@ p.lom{
   margin-top: 4px;
   display: inline-block;
 }
-.single-page-artical {
+/*.single-page-artical {
   min-height: 2280px;
-}
+}*/
 .navbar-collapse {
   padding-right: 0;
   padding-left: 0;
@@ -2684,4 +2684,5 @@ p.lom{
 	.login-grids {
 	  padding: 1.5em 0 0;
 	}
-}	
+}
+	

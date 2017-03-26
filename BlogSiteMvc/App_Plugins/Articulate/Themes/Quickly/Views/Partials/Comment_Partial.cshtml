@@ -1,0 +1,31 @@
+﻿@using Articulate
+@using Articulate.Models
+@inherits UmbracoViewPage<Articulate.Models.IMasterModel>
+
+@{
+    var recent = Umbraco.GetRecentPosts(Model, 4);
+}
+
+@foreach (var post in recent)
+{
+    <div class="facts">
+        <div class="tab_list">
+            @if (!post.PostImageUrl.IsNullOrWhiteSpace())
+            {
+                var thumbnail4 = post.GetCropUrl("postImage", "thumbnail");
+                if (!thumbnail4.IsNullOrWhiteSpace())
+                {
+                    <a href="@post.Url" class="b-link-stripe b-animate-go   swipebox" title="">
+                        <img src="@thumbnail4" alt="@post.Name" class="img-responsive" />
+                    </a>
+                }
+            }
+        </div>
+        <div class="tab_list1">
+            <a href="@post.Url">@post.Name</a>
+            <p>@post.PublishedDate.ToString("MMM d, yyyy HH:mm")<span>This is blog #@post.Name</span></p>
+        </div>
+        <div class="clearfix"> </div>
+    </div>
+}
+

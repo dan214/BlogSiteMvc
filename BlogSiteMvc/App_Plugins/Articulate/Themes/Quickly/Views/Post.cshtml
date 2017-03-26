@@ -1,0 +1,35 @@
+﻿@using Articulate
+@using Articulate.Models
+@using Umbraco.Core
+@inherits Umbraco.Web.Mvc.UmbracoViewPage<Articulate.Models.PostModel>
+@{
+    Layout = "Master.cshtml";
+    ViewBag.CssBodyClass = "post-template";
+}
+
+<div class="single-page-artical">
+    <div class="artical-content">
+
+        <h3><a href="@Model.Url">@Model.Name</a></h3>
+
+        <li><small> </small><span>@Model.PublishedDate.ToString("MMMM d, yyyy HH:mm")</span></li>
+
+        @Model.Body
+
+    </div>
+    <div class="artical-links">
+        Tags:
+        @Html.ListTags(Model,
+        @<a href="@Url.ArticulateTagUrl(Model, @item)">@item</a>)
+        <br />
+        Categories:
+        @Html.ListCategories(Model,
+        @<a href="@Url.ArticulateCategoryUrl(Model, @item)">@item</a>, " | ")
+        <br />
+        <img id="Img4" alt="comment" src="@Url.ThemedAsset(Model, "img/comments.gif")" />
+        <a rel="nofollow" href="@Model.Url#disqus_thread" data-disqus-identifier="@Model.GetContentKey()"></a>
+    </div>
+
+
+</div>
+<!-- single -->

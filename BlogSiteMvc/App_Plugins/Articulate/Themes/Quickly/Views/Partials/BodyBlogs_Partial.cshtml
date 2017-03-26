@@ -18,13 +18,18 @@
         <a data-disqus-identifier="@blog.GetContentKey()" href="@blog.Url#disqus_thread" class="hvr-bounce-to-bottom non"></a>
     </div>
     <div class="clearfix"> </div>
-
- 
-     <a href="@blog.Url"><img src="@blog.BlogBanner" alt="@blog.Name" class="img-responsive" /></a>
-   
-
-
     
+    @if (!blog.PostImageUrl.IsNullOrWhiteSpace())
+    {
+        var thumbnail1 = blog.GetCropUrl("postImage", "blogImageThumbnail");
+        if (!thumbnail1.IsNullOrWhiteSpace())
+        {
+            <a href="@blog.Url"><img src="@thumbnail1" alt="@blog.Name" class="img-responsive" /></a>
+        }
+    }
+
+
+
     <p class="para">
         @blog.Excerpt
     </p>

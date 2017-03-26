@@ -1,0 +1,13 @@
+﻿@using Articulate
+@using Articulate.Models
+@inherits UmbracoViewPage<Articulate.Models.IMasterModel>
+
+@{
+    var newsItems = Umbraco.GetRecentPosts(Model,7);
+}
+
+    @foreach (var blog in newsItems)
+    {
+        <li><a href="@blog.Url">@blog.Name</a></li>
+    }
+

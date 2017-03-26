@@ -729,6 +729,12 @@
     <Content Include="App_Plugins\Articulate\Themes\Quickly\Views\Partials\BannerBlogs_Partial.cshtml" />
     <Content Include="App_Plugins\Articulate\Themes\Quickly\Views\Partials\BodyBlogs_Partial.cshtml" />
     <Content Include="App_Plugins\Articulate\Themes\Quickly\Views\Partials\Popular_Partial.cshtml" />
+    <Content Include="App_Plugins\Articulate\Themes\Quickly\Views\Partials\Recent_Partial.cshtml" />
+    <Content Include="App_Plugins\Articulate\Themes\Quickly\Views\Partials\Comment_Partial.cshtml" />
+    <Content Include="App_Plugins\Articulate\Themes\Quickly\Views\Partials\SideImages_Partial.cshtml" />
+    <Content Include="App_Plugins\Articulate\Themes\Quickly\Views\Partials\SidePages_Partial.cshtml" />
+    <Content Include="App_Plugins\Articulate\Themes\Quickly\Views\Partials\AboutMe_Partial.cshtml" />
+    <Content Include="App_Plugins\Articulate\Themes\Quickly\Views\Post.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

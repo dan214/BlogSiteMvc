@@ -1,0 +1,24 @@
+﻿@using Articulate
+@using Articulate.Models
+@inherits UmbracoViewPage<Articulate.Models.IMasterModel>
+
+@{
+    var recent = Umbraco.GetRecentPosts(Model, 4);
+}
+
+@foreach (var post in recent)
+{
+
+    <div class="four-fig1">
+        @if (!post.PostImageUrl.IsNullOrWhiteSpace())
+        {
+            var thumbnail5 = post.GetCropUrl("postImage", "sideImageThumbnail");
+            if (!thumbnail5.IsNullOrWhiteSpace())
+            {
+                <a href="@post.Url" class="b-link-stripe b-animate-go   swipebox" title="">
+                    <img src="@thumbnail5" class="img-responsive" alt=" " />
+                </a>
+            }
+        }
+    </div>
+}

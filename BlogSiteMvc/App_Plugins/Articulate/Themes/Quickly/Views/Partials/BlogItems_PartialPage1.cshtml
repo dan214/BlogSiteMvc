@@ -12,7 +12,14 @@
 
     <li>
         <div class="banner-bottom-grid">
-            <img src="@blog.BlogBanner" alt=" " class="img-responsive" />
+            @if (!blog.PostImageUrl.IsNullOrWhiteSpace())
+            {
+                var thumbnail = blog.GetCropUrl("postImage", "gridImageThumbnail");
+                if (!thumbnail.IsNullOrWhiteSpace())
+                {
+                    <img src="@thumbnail" alt="@blog.Name" class="img-responsive" />
+                }
+            }
             <p>
                 @blog.Excerpt
             </p>
